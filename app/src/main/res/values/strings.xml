@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="irAFavoritos">Ir a Favoritos</string>
+    <string name="main_no_favoritos">No se han seleccionado favoritos</string>
+</resources>
