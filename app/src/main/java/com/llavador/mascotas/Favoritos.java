@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.llavador.mascotas.Adaptadores.FavoritasAdaptador;
+
 import java.util.ArrayList;
 
 public class Favoritos extends AppCompatActivity {
@@ -20,9 +22,9 @@ public class Favoritos extends AppCompatActivity {
         setContentView(R.layout.activity_favoritos);
 
         //Generamos una nueva Action Bar
-        Toolbar accionBar = (Toolbar) findViewById(R.id.accionBar);
-        setSupportActionBar(accionBar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //Toolbar accionBar = (Toolbar) findViewById(R.id.accionBar);
+        //setSupportActionBar(accionBar);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Inicializamos las favoritas
         favoritas = new ArrayList<Mascota>();

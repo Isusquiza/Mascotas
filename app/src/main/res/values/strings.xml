@@ -2,4 +2,29 @@
     <string name="app_name">Mascotas</string>
     <string name="irAFavoritos">Ir a Favoritos</string>
     <string name="main_no_favoritos">No se han seleccionado favoritos</string>
+    <string name="opc_contacto">Contacto</string>
+    <string name="opc_acercade">A cerca de...</string>
+    <string name="email_enviando">Enviado mensaje</string>
+    <string name="email_espere">Por favor espere...</string>
+    <string name="email_enviado">Mensaje enviado</string>
+
+    <string name="contacto_nombre">Nombre</string>
+    <string name="contacto_email">Email</string>
+    <string name="contacto_comentario">Comentarios</string>
+    <string name="contacto_enviar">Enviar</string>
+    <string name="contacto_enviando">Enviando</string>
+
+    <string name="bio_aplicacion_a">Aplicacion::</string>
+    <string name="bio_aplicacion_b">Mascotas</string>
+    <string name="bio_creada_por_a">Creada por:: </string>
+    <string name="bio_creada_por_b">Hugo Llavador</string>
+    <string name="bio_detalle_a">Detalles:: </string>
+    <string name="bio_detalle_b">Aplicación creada para el curso de creación de aplicaciones con Android</string>
+    <string name="bio_volver">Volver </string>
+
+    <string name="linea_simple">1</string>
+    <string name="diez_lineas">10</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

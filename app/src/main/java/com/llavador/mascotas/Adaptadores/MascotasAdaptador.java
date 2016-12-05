@@ -1,6 +1,5 @@
-package com.llavador.mascotas;
+package com.llavador.mascotas.Adaptadores;
 
-import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.llavador.mascotas.Mascota;
+import com.llavador.mascotas.R;
 
 import java.util.ArrayList;
 

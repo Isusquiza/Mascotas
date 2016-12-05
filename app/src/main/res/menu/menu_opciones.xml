@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/mContacto"
+        android:title="@string/opc_contacto"
+        android:orderInCategory="100" />
+    <item android:id="@+id/mACercaDe"
+        android:title="@string/opc_acercade"
+        android:orderInCategory="110" />
+</menu>
