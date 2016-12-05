@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -12,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.llavador.mascotas.Adaptadores.PageAdapter;
-import com.llavador.mascotas.Fragments.ListadoMascotasFragment;
+import com.llavador.mascotas.Fragments.ListadoMascotas;
 import com.llavador.mascotas.Fragments.MiMascota;
 
 import java.util.ArrayList;
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Fragment> agregarFragments(){
         ArrayList<Fragment> fragments = new ArrayList<>();
 
-        fragments.add(new ListadoMascotasFragment());
+        fragments.add(new ListadoMascotas());
         fragments.add(new MiMascota());
 
         return fragments;
