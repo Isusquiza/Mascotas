@@ -17,7 +17,6 @@ import java.util.ArrayList;
 
 public class ListadoMascotas extends Fragment {
     ArrayList<Mascota> mascotas;
-    ArrayList<Mascota> favoritas;
     private RecyclerView listaDeMascotas;
 
     @Nullable
@@ -26,7 +25,7 @@ public class ListadoMascotas extends Fragment {
         View v = inflater.inflate(R.layout.fragment_listado_mascotas, container, false);
 
         //Carga de datos
-        inicializarLista();
+        inicializarMascotas();
 
         //Inicializa el objeto que ha de mostrar los datos
         listaDeMascotas = (RecyclerView) v.findViewById(R.id.rvContactos);
@@ -40,9 +39,8 @@ public class ListadoMascotas extends Fragment {
         return v;
     }
 
-    public void inicializarLista(){
+    public void inicializarMascotas(){
         mascotas = new ArrayList<Mascota>();
-        favoritas = new ArrayList<Mascota>();
 
         mascotas.add(new Mascota("Abejita Margarita", R.drawable.a, 3));
         mascotas.add(new Mascota("Tortuguita Yolanda", R.drawable.b, 6));
@@ -54,7 +52,7 @@ public class ListadoMascotas extends Fragment {
     }
 
     public void inicializarAdaptador(){
-        MascotasAdaptador adaptador = new MascotasAdaptador(mascotas, favoritas);
+        MascotasAdaptador adaptador = new MascotasAdaptador(mascotas, this.getActivity());
         listaDeMascotas.setAdapter(adaptador);
     }
 }

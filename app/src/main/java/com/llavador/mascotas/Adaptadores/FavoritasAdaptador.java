@@ -1,5 +1,6 @@
 package com.llavador.mascotas.Adaptadores;
 
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,20 +19,22 @@ import java.util.ArrayList;
 
 public class FavoritasAdaptador extends RecyclerView.Adapter<FavoritasAdaptador.favoritasViewHolder>{
     ArrayList<Mascota> favoritas;
+    Activity activity;
 
-    public FavoritasAdaptador(ArrayList<Mascota> favoritas) {
+    public FavoritasAdaptador(ArrayList<Mascota> favoritas, Activity activity) {
         this.favoritas = favoritas;
+        this.activity = activity;
     }
 
     @Override
-    public FavoritasAdaptador.favoritasViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public favoritasViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_mascotas, parent, false);
 
-        return new FavoritasAdaptador.favoritasViewHolder(v);
+        return new favoritasViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(final FavoritasAdaptador.favoritasViewHolder holder, final int position) {
+    public void onBindViewHolder(final favoritasViewHolder holder, final int position) {
         final Mascota favorita = favoritas.get(position);
         holder.ivFoto.setImageResource(favorita.getFoto());
         holder.tvNombre.setText(favorita.getNombre());

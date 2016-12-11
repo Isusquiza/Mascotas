@@ -1,5 +1,6 @@
 package com.llavador.mascotas.Adaptadores;
 
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.llavador.mascotas.BBDD.ConstructorFavoritos;
 import com.llavador.mascotas.Mascota;
 import com.llavador.mascotas.R;
 
@@ -19,11 +21,11 @@ import java.util.ArrayList;
 
 public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.mascotaViewHolder> {
     ArrayList<Mascota> mascotas;
-    ArrayList<Mascota> favoritas;
+    Activity activity;
 
-    public MascotasAdaptador(ArrayList<Mascota> mascotas, ArrayList<Mascota> favoritas) {
+    public MascotasAdaptador(ArrayList<Mascota> mascotas, Activity activity) {
         this.mascotas = mascotas;
-        this.favoritas = favoritas;
+        this.activity = activity;
     }
 
     @Override
@@ -43,10 +45,8 @@ public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.ma
         holder.ibFavorito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (favoritas.size() > 4){
-                    favoritas.remove(0);
-                }
-                favoritas.add(mascota);
+                ConstructorFavoritos constructorFavoritos = new ConstructorFavoritos(activity);
+                constructorFavoritos.anyadirAFavoritas(mascota);
                 mascota.setRatio(mascota.getRatio() + 1);
                 bindViewHolder(holder, position);
             }

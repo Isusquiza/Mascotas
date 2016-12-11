@@ -7,4 +7,9 @@
     <item android:id="@+id/mACercaDe"
         android:title="@string/opc_acercade"
         android:orderInCategory="110" />
+    <item android:id="@+id/mFavoritos"
+        android:icon="@drawable/ic_estrella"
+        android:title="Favoritos"
+        android:orderInCategory="120"
+        app:showAsAction="always" />
 </menu>

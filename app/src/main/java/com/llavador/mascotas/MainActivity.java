@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -33,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         setUpViewPager();
 
-        if (toolBar == null){
+        if (toolBar != null){
             setSupportActionBar(toolBar);
+            getSupportActionBar().setIcon(R.drawable.ic_huella_gato);
         }
     }
 
@@ -53,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.mACercaDe:
                 intent = new Intent(this, Bio.class);
+                break;
+            case R.id.mFavoritos:
+                intent = new Intent(this, Favoritos.class);
                 break;
         }
         startActivity(intent);
